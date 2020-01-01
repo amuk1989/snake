@@ -1,0 +1,6 @@
+C:\GB\OOP\1\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\GB\OOP\1\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\GB\OOP\1\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\GB\OOP\1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\GB\OOP\1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\GB\OOP\1\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
