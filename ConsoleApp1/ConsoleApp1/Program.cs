@@ -10,29 +10,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
 
-            draw(x1, y1, sym1);
+            Point p1 = new Point();
 
-            int x2 = 4;
-            int y2 = 5;
+            p1.x = 1;
+            p1.y = 3;
+            p1.sym = '*';
 
-            char sym2 = '#';
+            p1.draw();
 
-            draw(x2, y2, sym2);
 
-            Console.SetCursorPosition(x2, y2);
-            Console.Write(sym2);
+
+            Point p2 = new Point();
+
+            p2.x = 4;
+            p2.y = 5;
+            p2.sym = '#';
+
+            p2.draw();
+
+
 
             Console.ReadLine();
         }
 
-        static void draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
+        
     }
 }
