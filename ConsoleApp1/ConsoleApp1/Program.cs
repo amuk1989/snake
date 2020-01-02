@@ -11,19 +11,20 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            Point p1 = new Point(1,1, '*');
-            p1.draw();
+            //Console.SetBufferSize(80, 25);
+            
+            HorizontalLine Topline = new HorizontalLine(0,78,0,'+');
+            verticalLine Rightline = new verticalLine(0,24,0,'+');
+            verticalLine Leftline = new verticalLine(0,24,78,'+');
+            HorizontalLine Bottomline = new HorizontalLine(0,78,24,'+');
+            Topline.Draw();
+            Leftline.Draw();
+            Bottomline.Draw();
+            Rightline.Draw();
 
-
-
-            Point p2 = new Point(1,2,'#');
-            p2.draw();
-
-            HorizontalLine line = new HorizontalLine(3,5,3,'+');
-            line.Draw();
-
-            verticalLine line2 = new verticalLine(3, 5, 3, '+');
-            line2.Draw();
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.right);
+            snake.Draw();
 
             Console.ReadLine();
         }

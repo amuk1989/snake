@@ -18,6 +18,29 @@ namespace ConsoleApp1
             y = _y;
             sym = _sym;
         }
+
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, Direction direction)
+        {
+            if (direction == Direction.up)
+            {
+                y = y + offset;
+            }else if (direction == Direction.down) {
+                y = y - offset;
+            } else if (direction == Direction.right)
+            {
+                x = x + offset;
+            }else if (direction == Direction.left)
+            {
+                x = x - offset;
+            }
+        }
         public void draw()
         {
             Console.SetCursorPosition(x, y);
