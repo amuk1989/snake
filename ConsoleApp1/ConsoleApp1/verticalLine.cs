@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class verticalLine
+    class verticalLine: Figure
     {
-
-        List<Point> pList;
+            
 
 
         public verticalLine(int yTop, int yBottom, int x, char sym)
@@ -22,13 +21,7 @@ namespace ConsoleApp1
             }
         }
 
-        public void Draw()
-        {
-            foreach (Point p in pList)
-            {
-                p.draw();
-            }
-        }
+       
     }
 
 }
