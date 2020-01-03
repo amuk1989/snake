@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Snake : Figure
     {
-        Direction direction;
+        public Direction direction;
 
         public Snake(Point tail, int length, Direction _direction)
         {
@@ -37,6 +37,19 @@ namespace ConsoleApp1
             Point nextPoint = new Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+
+        public void HandKey(ConsoleKey Key)
+        {
+            //ConsoleKeyInfo key = Console.ReadKey();
+            if (Key == ConsoleKey.LeftArrow)
+                direction = Direction.left;
+            if (Key == ConsoleKey.RightArrow)
+                direction = Direction.right;
+            if (Key == ConsoleKey.UpArrow)
+                direction = Direction.up;
+            if (Key == ConsoleKey.DownArrow)
+                direction = Direction.down;
         }
 
     }

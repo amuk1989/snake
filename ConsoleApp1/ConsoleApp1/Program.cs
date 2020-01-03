@@ -12,7 +12,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
 
-            //Console.SetBufferSize(80, 25);
+            //Console.SetBufferSize(90, 35);
             
             HorizontalLine Topline = new HorizontalLine(0,78,0,'+');
             verticalLine Rightline = new verticalLine(0,24,0,'+');
@@ -24,21 +24,27 @@ namespace ConsoleApp1
             Rightline.Draw();
 
             Point p = new Point(4, 5, '*');
-            Snake snake = new Snake(p, 4, Direction.right);
+            Snake snake = new Snake(p, 10, Direction.right);
             snake.Draw();
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
-            Thread.Sleep(300);
-            snake.Move();
+
+            /*for(int i = 0; i<10; i++)
+            {
+                snake.Move();
+                Thread.Sleep(300);
+            }*/
+
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.HandKey(key.Key);
+                   
+                }
+                snake.Move();
+                Thread.Sleep(100);
+            }
             
 
             Console.ReadLine();

@@ -30,9 +30,9 @@ namespace ConsoleApp1
         {
             if (direction == Direction.up)
             {
-                y = y + offset;
-            }else if (direction == Direction.down) {
                 y = y - offset;
+            }else if (direction == Direction.down) {
+                y = y + offset;
             } else if (direction == Direction.right)
             {
                 x = x + offset;
