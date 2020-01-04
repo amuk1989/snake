@@ -24,8 +24,12 @@ namespace ConsoleApp1
             Rightline.Draw();
 
             Point p = new Point(4, 5, '*');
-            Snake snake = new Snake(p, 10, Direction.right);
+            Snake snake = new Snake(p, 3, Direction.right);
             snake.Draw();
+
+            FoodCreator foodCreator = new FoodCreator(80,25,'$');
+            Point food = foodCreator.CreateFood();
+            food.draw();
 
             /*for(int i = 0; i<10; i++)
             {
@@ -42,7 +46,18 @@ namespace ConsoleApp1
                     snake.HandKey(key.Key);
                    
                 }
-                snake.Move();
+
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                
                 Thread.Sleep(100);
             }
             

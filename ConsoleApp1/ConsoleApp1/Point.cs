@@ -52,5 +52,10 @@ namespace ConsoleApp1
             sym = ' ';
             draw();
         }
+
+        public bool IsHit(Point food)
+        {
+            return food.x == this.x && food.y == this.y;
+        }
     }
 }
